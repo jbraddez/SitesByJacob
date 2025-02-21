@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites by Jacob</title>
+    <meta name="description" content="Affordable and professional websites by Jacob Bradley. Specialising in HTML, CSS, and JavaScript web development providing execptional websites and services to get your business seen on the internet.">
+    <meta name="author" content="Jacob Bradley">
+    <meta name="keywords" content="web development, website design, HTML, CSS, JavaScript, responsive websites, affordable web design">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Sites by Jacob - Affordable Web Development Services">
+    <meta property="og:description" content="Sites by Jacob offers affordable web development services using HTML, CSS, and JavaScript. Get your business online with a modern, responsive website.">
+<!--     <meta property="og:url" content="<domain>/">                    UPDATE with domain
+    <meta property="og:image" content="<domain>/images/logo.jpg"> 
+        -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sites by Jacob">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="website icon" href="./images/logo.png">
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="#top">Sites By Jacob</a>
+        <div class="navbar">
+            <a href="#what-i-do">What I Do</a>
+            <a href="#clients">Client Sites</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('open');
+            document.body.classList.toggle('nav-open');
+            document.querySelector('.hamburger').classList.toggle('open');
+        }
+    </script>
+    
+
+    <section id="what-i-do">
+        <h2>What I Do</h2>
+        <p>I specialize in creating high-quality, responsive websites that meet your business needs. From small businesses to large corporations, I have the skills and experience to create websites from scratch, providing all the services you need to get your business seen on the internet.</p>
+        <div class="button-container">
+            <a href="#contact" class="button">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="clients">
+        <h2>My Clients</h2>
+        <div class="client-grid">
+            <a href="https://bradleys.ltd" target="_blank" class="client-card">
+                <img src="./images/bradleys.jpg" alt="Bradleys Website">
+                <div class="client-info">
+                    <h3>Bradleys</h3>
+                    <p>Antique Packing Services & Furniture Carriers</p>
+                </div>
+            </a>
+    
+            <a href="https://shdemusic.com" target="_blank" class="client-card">
+                <img src="./images/shdemusic.jpg" alt="SHDE Website">
+                <div class="client-info">
+                    <h3>SHDE</h3>
+                    <p>Official Musician's Website</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    
+    <section id="pricing">
+        <h2>Pricing Plans</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Price (£)</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Website</td>
+                    <td>£50 - £150</td>
+                    <td>1-3 pages, mobile-friendly, basic SEO, contact form</td>
+                </tr>
+                <tr>
+                    <td>Standard Website</td>
+                    <td>£150 - £300</td>
+                    <td>4-8 pages, custom design, enhanced SEO, performance optimization</td>
+                </tr>
+                <tr>
+                    <td>Advanced Website</td>
+                    <td>£300 - £500</td>
+                    <td>9+ pages, animations, advanced features, e-commerce setup</td>
+                </tr>
+                <tr>
+                    <td>Extra Pages</td>
+                    <td>£10 - £30 per page</td>
+                    <td>Additional pages beyond package limit</td>
+                </tr>
+                <tr>
+                    <td>Custom Features</td>
+                    <td>£20 - £100+</td>
+                    <td>Forms, animations, API integrations, booking systems</td>
+                </tr>
+                <tr>
+                    <td>Hosting & Maintenance</td>
+                    <td>£5 - £20/month</td>
+                    <td>Hosting, updates, backups, security monitoring</td>
+                </tr>
+                <tr>
+                    <td>Content Updates</td>
+                    <td>£10 - £50/month</td>
+                    <td>Text/image changes, blog posts, minor adjustments</td>
+                </tr>
+                <tr>
+                    <td>Urgent Changes</td>
+                    <td>£20+ per request</td>
+                    <td>Quick edits outside normal updates</td>
+                </tr>
+                <tr>
+                    <td>SEO Optimization</td>
+                    <td>£30 - £100 one-time</td>
+                    <td>Advanced SEO setup for better ranking</td>
+                </tr>
+                <tr>
+                    <td>Domain Registration</td>
+                    <td>£10 - £20/year</td>
+                    <td>Buying and managing a domain for the client</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="notice">All pricing will be discussed during quotation.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <hr>
+        <form id="contact-form" onsubmit="event.preventDefault(); sendEmail();">
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="e.g. Jacob" required>
+            
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="e.g. test@example.com" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message"  placeholder="Type your message here" required></textarea>
+            
+            <button id="submit-btn" type="submit" value="Send">Submit</button>
+        </form>
+        <p id="alert">Sorry, an error occurred.</p>
+        <p id="success">Thank you, your message has been sent successfully!</p>
+    </section>
+    
+    <footer>
+        <a href="mailto:jacobbradleydev@gmail.com">jacobbradleydev@gmail.com</a>
+        <p>&copy; 2025 Sites by Jacob</p>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+       const elements = document.querySelectorAll('section');
+       elements.forEach(element => {
+           element.style.opacity = '0';
+       });
+   
+   
+       const observer = new IntersectionObserver((entries, observer) => {
+           entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                   entry.target.classList.add('slide-fade-in');
+                   observer.unobserve(entry.target);
+               }
+           });
+       }, { threshold: 0.1 });
+   
+       elements.forEach(element => observer.observe(element));
+   });
+       </script>
+
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+            publicKey: "0NN8TZomnJbkp4M3O",
+            });
+        })();
+    </script>
+    <script>
+        const alertEl = document.getElementById("alert");
+        const success = document.getElementById("success");
+        const submit_btn = document.getElementById("submit-btn");
+    
+       function sendEmail() {
+        const user_name = document.getElementById('name').value;
+        const user_email = document.getElementById('email').value;
+        const user_message = document.getElementById('message').value;
+    
+    
+        const lastSentTime = localStorage.getItem('lastSentTime');
+        const cooldownPeriod = 2 * 60 * 1000; 
+        const currentTime = new Date().getTime();
+    
+        if (lastSentTime && currentTime - lastSentTime < cooldownPeriod) {
+                   alertEl.style.display = "block";
+                   alertEl.style.opacity = "1";
+                   alertEl.textContent = `Sorry, you can't sent a message for ${cooldownPeriod - (currentTime - lastSentTime)} seconds`;
+            return;
+        }
+    
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            try {
+                emailjs.send("service_rvn18eo", "template_2mqwu1v", {
+                    name: user_name,
+                    email: user_email,
+                    message: user_message,
+                })
+                .then(response => {
+                   success.style.display = "block";
+                   success.style.opacity = "1";
+                   localStorage.setItem('lastSentTime', currentTime);
+                })
+                .catch(error => {
+                    console.error("Failed to send email:", error);
+                   alertEl.style.display = "block";
+                   alertEl.style.opacity = "1";
+                   alertEl.textContent = "There was an error sending your message, Please try again later.";
+                });
+            } catch (error) {
+                console.error("Error sending email:", error);
+                   alertEl.style.display = "block";
+                   alertEl.style.opacity = "1";
+                   alertEl.textContent = "There was an error sending your message, Please try again later.";
+            }
+        submit_btn.style.display = 'none';
+        });
+    }
+    </script>
+</body>
+</html>

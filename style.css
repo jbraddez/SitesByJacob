@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    color: #fefefe;
+    transition: ease-in-out 300ms;
+}
+
+:target {
+    scroll-margin-top: 80px; 
+}
+
+.logo{
+    font-family: "Dosis", serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #000028;
+    width: 100svw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 52, 0.75);
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+header a{
+    font-size: 1.1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+header a:hover{
+    transform: rotate(3deg);
+}
+
+.navbar{
+    display: flex;
+   gap: 20px;
+}
+
+footer{
+    z-index: 1;
+    background: rgba(0, 0, 52, 0.75);
+    box-shadow: rgba(0, 6, 49, 0.25) 0px -3px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+#pricing {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+section h2{
+    font-size: 2rem;
+    color: #fefefe;
+    text-shadow: 0 0 10px rgba(98, 98, 98, 0.5);
+}
+
+table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(0, 0, 52, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    background: #001144;
+    font-size: 1.2rem;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Dosis", serif;
+}
+
+tr:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+td {
+    font-size: 1rem;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/*  contact  */
+
+section{
+    padding: 20px;
+}
+
+#contact{
+    max-width: 900px;
+    width: 90%;
+    text-align: left;
+    justify-self: center;
+    background: rgba(0, 0, 59, 0.9);
+    border-radius: 13px;
+}
+
+#contact h2 {
+    font-size: 1.6rem;
+    color: #fefefe;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#contact hr {
+    border: 0.5px solid #acacac;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+form label {
+    color: #fefefe;
+    font-weight: 500;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #acacac;
+    background: #2d2f44; 
+    color: #fefefe;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #5c6bc0; 
+    background: #393d55; 
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+form button {
+    padding: 12px;
+    background: #5c6bc0; 
+    border: none;
+    border-radius: 8px;
+    color: #fefefe;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #3f51b5;
+    scale: 1.01;
+}
+
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(92, 107, 192, 0.7);
+}
+
+#alert, #success {
+    display: none;
+    opacity: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 15px;
+    transition: opacity 0.3s ease;
+}
+
+#alert {
+    background-color: #d32f2f;
+    color: #fefefe;
+    border: 1px solid #b71c1c;
+}
+
+#success {
+    background-color: #388e3c; 
+    color: #fefefe;
+    border: 1px solid #2e7d32;
+}
+
+/* Client sites */
+
+#clients {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#clients h2 {
+    font-size: 2rem;
+    color: #fefefe;
+    text-shadow: 0 0 10px rgba(98, 98, 98, 0.5);
+    margin-bottom: 30px;
+}
+
+.client-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.client-card {
+    width: clamp(280px, 45%, 400px);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.client-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.client-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.client-info {
+    background: rgba(0, 0, 52, 0.85);
+    padding: 15px;
+    text-align: center;
+}
+
+.client-info h3 {
+    margin: 0;
+    font-size: 1.7rem;
+    color: #fefefe;
+}
+
+/* What I Do */
+
+#what-i-do {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(0, 0, 52, 0.9), rgba(0, 0, 28, 0.9));
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    margin: 40px 10px;
+    justify-self: center;
+    max-width: 900px;
+}
+
+#what-i-do h2 {
+    font-size: 2.5rem;
+    color: #fefefe;
+    text-shadow: 0 0 15px rgba(98, 98, 98, 0.5);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#what-i-do h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #fefefe;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+#what-i-do p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    max-width: 750px;
+    margin: 0 auto 30px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    color: #fefefe;
+    background: linear-gradient(135deg, #0077ff, #00d4ff);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #00d4ff, #0077ff);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+/* animations */
+
+.slide-fade-in {
+    opacity: 0;
+    animation: slideFadeIn 1s forwards;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* media screen queries */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 0.75rem;
+        padding: 12px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    #contact {
+        padding: 15px;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    #contact h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 600px) { 
+        section.visible{
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #what-i-do h2 {
+        font-size: 2rem;
+    }
+
+    #what-i-do p {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+
+
+/* HAMBURGER MENU */
+
+
+.navbar a {
+    color: #fefefe;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fefefe;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        height: 100vh;
+        width: 100vw; 
+        background: rgba(0, 0, 52, 0.95);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease;
+    }
+
+    .navbar.open {
+        right: 0;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+/* styles for other */
+
+.notice{
+    margin-top: 10px;
+}
