@@ -40,7 +40,6 @@ body {
     font-size: var(--font-base);
     line-height: 1.6;
     padding: 0 1rem;
-    overflow-x: hidden;
 }
 
 header {
