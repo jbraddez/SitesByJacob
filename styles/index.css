@@ -1,0 +1,58 @@
+
+.about-preview p, .cta-banner p {
+text-align: center;
+max-width: 40rem;
+margin: 0 auto 1.5rem auto;
+}
+
+.cta-banner {
+text-align: center;
+}
+
+.hero {
+    text-align: left;
+    padding: 4rem 0 8rem;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.hero h1 {
+    font-size: clamp(1.125rem, 6vw, 2.5rem);
+    margin-bottom: 1rem;
+    animation: textLoadFromLeft 300ms ease-out ;
+}
+
+.hero p {
+    font-size: clamp(0.7rem, 3vw, 1.125rem);
+    margin-bottom: 2rem;
+    color: #ccc;
+    animation: textLoadFromLeft 300ms ease-out;
+}
+
+.hero .cta{
+    animation: textLoadFromLeft 300ms ease-out;
+}
+
+#hero-phone{
+    position: absolute;
+    width: 25%;
+    right: 1rem;
+    bottom: 0;
+    animation: loadUp 300ms linear;
+    z-index: -1;
+}
+
+@keyframes loadUp{
+    0%{
+       transform: translateY(100%);
+       opacity: 0;
+    }100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.services-overview li {
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.7rem, 3vw, 1.125rem);
+    }

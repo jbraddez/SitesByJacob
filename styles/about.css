@@ -1,0 +1,23 @@
+.hero {
+    display: block; 
+    padding: 0 2rem;
+}
+
+.text {
+    overflow: hidden;
+}
+
+.profile {
+    float: right;
+    shape-outside: circle();
+    clip-path: circle();
+    width: 30%;
+    margin: 0 0 10px 10px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+section{
+    margin-top: 3rem;
+}
+  

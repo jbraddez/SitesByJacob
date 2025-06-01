@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sites by Jacob</title>
+  <link rel="stylesheet" href="/style.css"/>
+  <link rel="stylesheet" href="/styles/contact.css"/>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">JB</a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="primary-navigation" role="navigation">
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/services.html">Services</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+    <main class="slideLeft">
+        <h1>Contact Me</h1>
+        <p>If you have any enquiries please fill out the contact form below</p>
+        <form id="contact-form" onsubmit="event.preventDefault(); sendEmail();">
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="e.g. Jacob" required>
+            
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="e.g. test@example.com" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message"  placeholder="Type your message here" required></textarea>
+            
+            <button id="submit-btn" class="cta" type="submit" value="Send">Submit</button>
+        </form>
+        <p id="alert">Sorry, an error occurred.</p>
+        <p id="success">Thank you, your message has been sent successfully!</p>
+    </main>
+
+  <footer>
+    <p>&copy; 2025 Sites by Jacob</p>
+  </footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init({
+        publicKey: "0NN8TZomnJbkp4M3O",
+        });
+    })();
+</script>
+
+  <script src="/scripts/script.js"></script>
+  <script src="/scripts/contact.js"></script>
+  
+</body>
+</html>
