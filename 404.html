@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sites by Jacob</title>
+  <link rel="stylesheet" href="/style.css"/>
+  <style>
+    main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 0;
+    }
+    img{
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .cta{
+        margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">JB</a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="primary-navigation" role="navigation">
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/services.html">Services</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <img src="/images/404-not-found.svg" alt="Man looking out into the distance">  
+    <h1>404</h1>
+    <h3>Page Not Found</h3>
+    <a href="/" class="cta">Go Home</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sites by Jacob</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('primary-navigation');
+    window.addEventListener('DOMContentLoaded', ()=>{
+        requestAnimationFrame(() => {
+            nav.style.transition = '500ms ease-in-out';
+        });
+    });
+  
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      toggle.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  </script>
+  
+</body>
+</html>
