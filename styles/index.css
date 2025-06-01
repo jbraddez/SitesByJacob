@@ -5,10 +5,6 @@ max-width: 40rem;
 margin: 0 auto 1.5rem auto;
 }
 
-.cta-banner {
-text-align: center;
-}
-
 .hero {
     text-align: left;
     padding: 4rem 0 8rem;
@@ -19,18 +15,18 @@ text-align: center;
 .hero h1 {
     font-size: clamp(1.125rem, 6vw, 2.5rem);
     margin-bottom: 1rem;
-    animation: textLoadFromLeft 300ms ease-out ;
+    animation: slideLeft 300ms ease-out ;
 }
 
 .hero p {
     font-size: clamp(0.7rem, 3vw, 1.125rem);
     margin-bottom: 2rem;
     color: #ccc;
-    animation: textLoadFromLeft 300ms ease-out;
+    animation: slideLeft 300ms ease-out;
 }
 
 .hero .cta{
-    animation: textLoadFromLeft 300ms ease-out;
+    animation: slideLeft 300ms ease-out;
 }
 
 #hero-phone{
@@ -40,6 +36,10 @@ text-align: center;
     bottom: 0;
     animation: loadUp 300ms linear;
     z-index: -1;
+}
+
+.fadeUp{
+    animation: loadUp 300ms ease-out;
 }
 
 @keyframes loadUp{

@@ -12,3 +12,10 @@ main{
     flex-wrap: wrap;
     margin: 0 auto;
 }
+
+.project-list a:nth-child(even){
+    animation: slideRight 300ms ease-out;
+}
+.project-list a:nth-child(odd){
+    animation: slideLeft 300ms ease-out;
+}

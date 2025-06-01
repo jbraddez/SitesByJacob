@@ -3,6 +3,10 @@
     padding: 0 2rem;
 }
 
+.hero p{
+    margin-top: 2rem;
+}
+
 .text {
     overflow: hidden;
 }
@@ -12,12 +16,51 @@
     shape-outside: circle();
     clip-path: circle();
     width: 30%;
-    margin: 0 0 10px 10px;
     object-fit: cover;
+    margin: 0 0 8px 8px;
     border-radius: 50%;
 }
 
 section{
-    margin-top: 3rem;
+    max-width: var(--max-width);
+    margin: 5rem auto 0;
 }
   
+.skill-list{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-list li{
+    list-style-type: none;
+    flex: 1;
+    max-width: 3rem;
+    position: relative;
+    cursor: pointer;
+}
+
+li svg, li img{
+    height: 100%;
+    width: 100%;
+}
+
+li p{
+    display: none;
+}
+
+li:hover p,li:active p{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,100%);
+}
+
+.cta-banner h2{
+    margin-bottom: 0;
+}
+.cta{
+    margin: 1rem 0 3rem;
+}

@@ -54,15 +54,31 @@ header {
 }
 
 .slideLeft{
-    animation: textLoadFromLeft 300ms ease-in-out;
+    animation: slideLeft 300ms ease-in-out;
 }
 
-@keyframes textLoadFromLeft{
+@keyframes slideLeft{
     0%{
         transform: translateX(-50vw);
     }100%{
         transform: translate(0);
     }
+}
+
+.slideRight{
+    animation: slideRight 300ms ease-in-out;
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(50vw);
+    }100%{
+        transform: translate(0);
+    }
+}
+
+.fadeDown{
+    animation: headerLoad 300ms ease-out;
 }
 
 @keyframes headerLoad{
@@ -273,3 +289,8 @@ nav{
     flex-direction: column;
   }
 }
+
+.cta-banner {
+    text-align: center;
+}
+
