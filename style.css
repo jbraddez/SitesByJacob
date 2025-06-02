@@ -216,6 +216,11 @@ width: 100%;
   z-index: 2;
 }
 
+.menu-toggle.open{
+    position: fixed;
+    right: 1rem;
+}
+
 .menu-toggle span {
     display: block;
     height: 3px;
@@ -239,7 +244,7 @@ transform: translateY(-8px) rotate(-45deg);
 }
 
 nav{
-    transition: 0;
+    transition: none;
 }
 
 @media screen and (min-width: 769px){
@@ -252,7 +257,7 @@ nav{
   nav {
     display: flex;
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     flex-direction: column;
@@ -267,6 +272,7 @@ nav{
     opacity: 0;
     transform: translateY(50px);
     pointer-events: none;
+    transition: height 0s !important;
   }
 
   nav.open {

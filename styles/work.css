@@ -19,3 +19,9 @@ main{
 .project-list a:nth-child(odd){
     animation: slideLeft 300ms ease-out;
 }
+
+@media screen and (max-width: 768px){
+    .project-list a{
+        width: 100%;
+    }
+}
