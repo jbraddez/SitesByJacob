@@ -31,11 +31,14 @@ margin: 0 auto 1.5rem auto;
 
 #hero-phone{
     position: absolute;
-    width: 25%;
     right: 1rem;
     bottom: 0;
     animation: loadUp 300ms linear;
     z-index: -1;
+    width: 25%;
+    min-width: 6rem;
+    min-height: 6rem;
+    aspect-ratio: 0.97;
 }
 
 .fadeUp{
