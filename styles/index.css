@@ -55,7 +55,49 @@ margin: 0 auto 1.5rem auto;
     }
 }
 
-.services-overview li {
-    margin-bottom: 0.5rem;
+.services-overview ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .services-overview li {
+    position: relative;
+    flex: 1 1 clamp(180px, 30%, 280px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    background: var(--accent-hover);
+    box-shadow: 0 6px 16px #0007;
+    border-radius: 0.75rem;
+    height: 4lh;
     font-size: clamp(0.7rem, 3vw, 1.125rem);
-    }
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+  .services-overview li:hover {
+    transform: translateY(-4px);
+  }
+  
+  .services-overview li p {
+    z-index: 1;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .services-overview li svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: calc(100% - 0.7rem);
+    fill: var(--accent-shadow);
+    z-index: 0;
+    pointer-events: none;
+  }
